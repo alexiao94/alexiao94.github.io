@@ -8,10 +8,12 @@
   <title>Alex Xiao</title>
   <link rel="stylesheets"
   href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
-   <link rel="stylesheets"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css" integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ==" crossorigin="anonymous"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <script src="https://kit.fontawesome.com/1f89b678a2.js" crossorigin="anonymous"></script>
@@ -27,10 +29,10 @@
     </button>
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#home" class="nav__link"></a>Home</li>
-        <li class="nav__item"><a href="#about" class="nav__link"></a>About Me</li>
-        <li class="nav__item"><a href="#experience" class="nav__link"></a>Experiences</li>
-        <li class="nav__item"><a href="#project" class="nav__link"></a>Projects</li>
+        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+        <li class="nav__item"><a href="#experience" class="nav__link">Experiences</a></li>
+        <li class="nav__item"><a href="#project" class="nav__link">Projects</a></li>
       </ul>
     </nav>
   </header>
@@ -50,7 +52,7 @@
     <p class="section__subtitle section__subtitle--about">More than a Software Engineer</p> 
     <div class="about-me__body">
       <p> 
-        A Computer and Information Science graduate student at University of Oregon with a passion of engineering, coding, and solving problems. Graduated from Texas A&M University and worked as a Mechanical Engineering in the robotic automation industry found the passion for coding. Worked with several project including, but not limited to vision system, micro-controllers, programmable logic controllers, web applications, machine learning, and more. 
+        A Computer and Information Science graduate student at University of Oregon with a passion of engineering, coding, and solving problems. Graduated from Texas A&M University and worked as a Mechanical Engineering in the robotic automation industry found the passion for coding. Worked with several project including, but not limited to vision system, micro-controllers, programmable logic controllers, web applications, machine learning, game development, and more. 
     </div>
     <a href="#experience" class="btn">Experiences</a>
     <a href="#project" class="btn">Previous Projects</a>
@@ -63,17 +65,28 @@
     <div class="experiences">
       <div class="experience">
         <h3>Graduate Research</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>
+          Investigated the effects of several network vulnerabilities. Explored the widely range of solutions for current network problems. Proposed new forms of defense against a link flooding attacks, a form of attack that is hard to detect and defend against it.   
+
+        </p>
       </div> <!--/ experience-->
 
       <div class="experience">
         <h3> Graduate Teaching</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p> 
+          Taught an introductory web development course at University of Oregon. 
+          Enhanced student learning experience by exploring wide range of instructional approaches and innovative classroom activities.
+          Evaluated and discussed the course material to professor in charge to improve the learning experience. 
+          Proactively encourage student to find other solutions.
+          Closely observed student's performance, behavior, social development, and physical health.
+        </p>
       </div> <!--/ experience-->
       
       <div class="experience">
         <h3>Mechanical Engineer</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>
+          Designed several mechanical mountings and tools for Yaskawas robots. Designed electrical schematics for the power and controls of electronics such as Variable Frequency Drives, power supplies, robots, Programmable Logic Controllers, etc. Programmed Human-Machines Interface by designing web applications. Programmed camera vision system for the classification of products. Programmed Rockwell and Siemens PLCs.  
+        </p>
       </div> <!--/ experience-->
     </div>
 
@@ -84,15 +97,15 @@
     <p class="section__subtitle--project">A selection of my range of projects</p>
     <div class="portfolio">
       <!-- Portfolio Item 1-->
-      <a href="#" class="portfolio__item">
+      <a href="https://github.com/alexiao94/HandRecognition" class="portfolio__item">
         <img src="img/ml.png" alt="Handwritten Recognition" class="portfolio__img">
       </a>
       <!-- Portfolio Item 2-->
-      <a href="#" class="portfolio__item">
+      <a href="https://github.com/alexiao94/CloudStorage" class="portfolio__item">
         <img src="img/cs.png" alt="Cloud-based Storage Web Application" class="portfolio__img">
       </a>
       <!-- Portfolio Item 3-->
-      <a href="#" class="portfolio__item">
+      <a href="https://github.com/alexiao94/ParallelChess" class="portfolio__item">
         <img src="img/chess.png" alt="Chess with Parallel Programming" class="portfolio__img">
       </a>
       <!-- Portfolio Item 4-->
@@ -103,11 +116,12 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-    <a href="mailto:alexxiaocai@gmail.com" class="footer-link">alexxiaocai@gmail.com</a>
+  <footer class="footer">
+
+    <a href="mailto:alexxiaocai@gmail.com" class="footer__link">alexxiaocai@gmail.com</a>
     <ul class="social-list">
       <li class="social-list__item">
-        <a class="social-list__link" href="https://linkedin/in/axiaocai">
+        <a class="social-list__link" href="https://linkedin.com/in/axiaocai">
           <i class="fa-brands fa-linkedin"></i>
         </a>
       </li>
@@ -118,6 +132,7 @@
       </li>
     </ul>
   </footer>
-</body>
 
+  <script src="js/index.js"></script>
+</body>
 </html>

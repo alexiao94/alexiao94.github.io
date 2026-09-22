@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Cai — Software Engineer",
+  title: "Alex Xiao Cai — Full-Stack Software Engineer",
   description: "Portfolio: experience and projects.",
 };
 

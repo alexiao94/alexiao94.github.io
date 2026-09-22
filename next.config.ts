@@ -7,6 +7,9 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const nextConfig: NextConfig = {
   output: "export",
+  // Dev only: allow opening the dev server from this host (e.g. an IDE/WSL
+  // preview). Without it, hydration is blocked and clicks do nothing.
+  allowedDevOrigins: ["172.19.192.1"],
   basePath,
   assetPrefix: basePath || undefined,
   images: { unoptimized: true },

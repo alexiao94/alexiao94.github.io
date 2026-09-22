@@ -1,4 +1,4 @@
-const links = ["about", "experience", "projects", "contact"];
+const links = ["about", "experience", "projects", "education", "contact"];
 
 export default function Nav({ handle }: { handle: string }) {
   return (

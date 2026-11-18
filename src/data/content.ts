@@ -6,10 +6,10 @@ export const profile = {
   role: "Full-Stack Software Engineer",
   location: "Round Rock, Texas",
   tagline:
-    "Django and Next.js systems, microservices, and production deployments on Azure and AWS.",
+    "Production web apps, backend APIs, and distributed systems on Azure and AWS.",
   about: [
-    "Full-stack engineer with a background in both software and mechanical engineering. I specialize in Django and Next.js systems and microservices architecture, and I have deployed production workloads on Azure and AWS.",
-    "My work has cut latency, deployment time, and operational overhead. I am currently looking for onsite, hybrid, or remote roles in the Austin, TX area.",
+    "Software engineer with an MS in Computer Science and experience building production web applications, backend APIs, and cloud infrastructure. I work mostly in Python, Java, and TypeScript with Django, Spring Boot, and Next.js, and I have built event-driven microservice systems and CI/CD pipelines across Azure and AWS.",
+    "My work has cut latency, deployment time, and operational overhead. I also bring a background in industrial automation and robotics from my years as a mechanical engineer.",
   ],
   email: "alexxiaocai@gmail.com",
   github: "https://github.com/alexiao94",
@@ -18,18 +18,19 @@ export const profile = {
 };
 
 export const skills: { label: string; items: string }[] = [
-  { label: "Languages", items: "Python, Java, C++, C, C#, Go, JS, TS" },
-  { label: "Frontend", items: "React, Next.js, Tailwind, Daisy UI" },
-  { label: "Backend", items: "Django, Spring Boot, FastAPI, ASP.NET, Node.js" },
+  { label: "Languages", items: "Python, Java, TypeScript, JavaScript, C++, C#, Go" },
+  { label: "Frontend", items: "React, Next.js, Tailwind CSS, DaisyUI" },
+  { label: "Backend", items: "Spring Boot, Django, FastAPI, ASP.NET, Node.js" },
   { label: "Databases", items: "PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch" },
   {
     label: "DevOps / Cloud",
-    items: "Docker, Kubernetes, GitHub Actions, Azure, AWS, MinIO",
+    items: "AWS, Azure, Docker, Kubernetes, GitHub Actions, MinIO",
   },
-  { label: "ML / AI", items: "PyTorch, Ollama" },
+  { label: "Architecture", items: "Microservices, REST APIs, Event-Driven Systems, Kafka" },
+  { label: "ML / AI", items: "PyTorch, Claude API, OpenAI API, Ollama" },
   {
     label: "Practices",
-    items: "REST APIs, CI/CD, Agile/Scrum, Git, Linux, TDD",
+    items: "JUnit, Jest, Vitest, TDD, CI/CD, Git, Linux, Agile/Scrum, AI-assisted development",
   },
   { label: "Spoken", items: "English, Spanish (Bilingual)" },
 ];
@@ -44,15 +45,26 @@ export type Job = {
 
 export const experience: Job[] = [
   {
+    company: "Meta (via TEKsystems)",
+    title: "Data Analyst",
+    period: "Oct 2026 — Present",
+    location: "Austin, TX",
+    highlights: [
+      "Analyze account recovery signals with internal analytics tools to evaluate account activity, identify patterns, and support data classification.",
+      "Identify recurring trends and anomalies across account recovery cases, supporting data-driven assessments and consistent classification decisions.",
+      "Investigate account recovery patterns across many cases on analytical platforms, contributing to operational analysis and data-informed decision-making.",
+    ],
+  },
+  {
     company: "Advanta Seeds",
     title: "Software Developer",
     period: "Jun 2024 — Aug 2025",
     location: "Remote",
     highlights: [
-      "Built responsive web apps with Next.js and Daisy UI, improving user interaction by 30% through A/B testing and close work with UX/UI teams.",
-      "Designed token-based authentication with third-party integrations, securing all API endpoints; validated through manual penetration testing and access log review.",
-      "Cut data latency by 40% on Django REST API endpoints through query optimization and caching, verified with Postman benchmarks and Azure monitoring.",
-      "Maintained CI/CD pipelines on GitHub Actions and Azure for a 5-person team shipping 10+ deployments per week, fixing stale-deployment issues from Azure slot limits and cutting deployment time by 50%.",
+      "Built responsive web apps with Next.js and DaisyUI, improving user interaction by 30% through A/B testing and iterative UX improvements with design teams.",
+      "Implemented token-based authentication and third-party integrations, strengthening API security and streamlining authentication workflows.",
+      "Cut Django REST API response latency by 40% through database query optimization and caching.",
+      "Automated testing and deployment with GitHub Actions and Azure for a 5-person team shipping 10+ deployments per week; resolved Azure slot-related release bottlenecks and cut deployment time by 50%.",
     ],
   },
   {
@@ -61,8 +73,8 @@ export const experience: Job[] = [
     period: "Sep 2021 — Jun 2024",
     location: "Eugene, OR",
     highlights: [
-      "Taught Web Development I & II, Computer Networks, and Database Systems with live coding demos and one-on-one mentoring, raising class participation by 60%.",
-      "Wrote a Jest-based testing script that cut grading time by 80% and administrative overhead by 60%.",
+      "Led live coding demos and one-on-one mentoring for Web Development I & II, Computer Networks, and Database Systems, raising class participation by 60%.",
+      "Developed a Jest testing script that cut grading time by 80% and administrative overhead by 60%.",
     ],
   },
   {
@@ -72,7 +84,7 @@ export const experience: Job[] = [
     location: "College Station, TX",
     highlights: [
       "Reduced system migration time by 50% through modular code refactoring, delivering ahead of schedule.",
-      "Led an SQL database refactor that reduced data redundancy by 40%, verified with integrity checks and query benchmarks.",
+      "Led an SQL database refactor that reduced data redundancy by 40% and improved data accuracy and application performance.",
     ],
   },
   {
@@ -106,12 +118,51 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "Property Bill Automation",
+    subtitle: "Invoice Ingestion & Workflow Platform",
+    start: "2026-11",
+    description:
+      "Full-stack platform that ingests property bills, extracts them with an LLM, and matches them to properties and vendors.",
+    overview:
+      "A full-stack property bill automation platform built with React 19, TypeScript, Java 21, Spring Boot and PostgreSQL. It exposes 13 REST endpoints across 5 domains, defined contract-first with OpenAPI, and handles invoice ingestion, extraction, property-vendor matching and invoice workflow management.",
+    highlights: [
+      {
+        title: "Contract-first API",
+        body: "13 REST endpoints across 5 domains are defined in an OpenAPI contract first, and the Spring Boot backend and React client are built against it.",
+      },
+      {
+        title: "Reliable ingestion and duplicate prevention",
+        body: "Uploaded invoices are hashed with SHA-256 and stored in MinIO object storage, and PostgreSQL uniqueness constraints reject a file that has already been ingested.",
+      },
+      {
+        title: "LLM-powered extraction",
+        body: "Invoice fields are extracted by an LLM through OpenRouter, then automatically matched to the right property and vendor and moved into the invoice workflow.",
+      },
+      {
+        title: "Test coverage",
+        body: "I expanded frontend coverage from zero to 95 Vitest tests covering form validation, API error handling and user-session fallback logic, contributing to a 174-test suite overall. A reusable Node.js seeding script sets up demo data.",
+      },
+    ],
+    tech: [
+      "Java 21",
+      "Spring Boot",
+      "PostgreSQL",
+      "React 19",
+      "TypeScript",
+      "OpenAPI",
+      "MinIO",
+      "OpenRouter",
+      "Vitest",
+      "Docker",
+    ],
+  },
+  {
     name: "Protos",
-    subtitle: "Multi-Cloud Monitoring Dashboard",
+    subtitle: "Multi-Cloud Monitoring Platform",
     start: "2026-06",
     end: "2026-07",
     description:
-      "Dashboard that polls GitHub, Azure and AWS resources, plus AI repo docs and collaborative notes.",
+      "Event-driven monitoring platform with 8 Spring Boot microservices and Kafka across GitHub, Azure and AWS.",
     overview:
       "Protos is a monitoring dashboard for GitHub, Azure and AWS resources. It is split into Java/Spring Boot services connected by Kafka, a Next.js frontend, a small Node collaborative-editing server, and a Windows Electron desktop client. It runs on a single Azure VM via Docker Compose and is beta-gated. Several parts are unfinished (see the roadmap highlight).",
     highlights: [

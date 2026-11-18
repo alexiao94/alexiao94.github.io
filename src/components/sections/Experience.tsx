@@ -12,10 +12,11 @@ export default function Experience() {
               <h3 className="font-semibold">
                 {job.title} <span className="text-accent">@ {job.company}</span>
               </h3>
-              <span className="font-mono text-xs text-muted">
-                {job.period} · {job.location}
-              </span>
+         
             </div>
+            <span className="font-mono text-xs text-muted">
+              {job.period} · {job.location}
+            </span>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-muted marker:text-accent">
               {job.highlights.map((h) => (
                 <li key={h}>{h}</li>
